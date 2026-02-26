@@ -1,0 +1,7 @@
+{
+  "buttons": [
+    { "id": "history", "label": "ИСТОРИЯ <br/> УТКИНОЙ ДАЧИ" },
+    { "id": "current", "label": "ТЕКУЩАЯ <br/> ВЫСТАВКА" },
+    { "id": "archive", "label": "АРХИВ ВЫСТАВОК" }
+  ]
+}

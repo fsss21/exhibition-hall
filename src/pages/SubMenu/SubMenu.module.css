@@ -1,0 +1,356 @@
+.subMenu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 40px 20px;
+  padding-top: 100px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.subMenuBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.subMenuContent {
+  padding-top: 40px;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.subMenuCenterText {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 0 20px;
+}
+
+
+.subMenuCenterText h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subMenuCenterText p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Стили для страницы С фото */
+.subMenuMainContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin-top: 20px;
+  height: calc(100vh - 300px);
+  min-height: 500px;
+  width: 100%;
+}
+
+/* Стили для страницы БЕЗ фото */
+.subMenuMainContentCentered {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Страница /archive/future/:id — свой блок контента для кастомизации */
+.futureProjectMainContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin-top: 7%;
+  height: calc(100vh - 300px);
+  min-height: 500px;
+  width: 100%;
+}
+
+.futureProjectMainContentCentered {
+  justify-content: center;
+  align-items: center;
+}
+
+.futureProjectMainContentCentered .subMenuMainContentMenu {
+  max-width: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+.subMenuMainContentMenu {
+  display: flex;
+  width: 700px;
+  padding: 20px;
+}
+
+/* Стили для страницы БЕЗ фото */
+.subMenuMainContentCentered .subMenuMainContentMenu {
+  max-width: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Стили для страницы С фото */
+.subMenuTextBlock {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+/* Стили для страницы БЕЗ фото */
+.subMenuTextBlockCentered {
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0;
+  max-width: 800px;
+  width: 100%;
+  min-height: 650px;
+}
+
+/* Стили для страницы С фото */
+.subMenuBottomNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  max-width: 600px;
+  bottom: 2%;
+}
+
+/* Стили для страницы БЕЗ фото */
+.subMenuTextBlockCentered .subMenuBottomNavigation {
+  position: relative;
+  bottom: auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+* button{
+  font-family: 'Anticva', serif;
+}
+
+.controlsNavMenu{
+  display: flex;
+  gap: 15px;
+}
+
+.subMenuTextBlock h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #291600;
+  font-family: 'Anticva', serif;
+}
+
+.subMenuTextBlock p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #221102;
+  font-family: 'Raleway-v4020', serif;
+}
+
+.subMenuTextBlock p:last-child {
+  margin-bottom: 0;
+}
+
+.subMenuTextNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.subMenuTextNavBtn {
+  background: none;
+  color: #826748;
+  border: 2px solid #826748;
+  border-radius: 2px;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subMenuTextNavBtn:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+
+.subMenuTextNavBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.subMenuTextCounter {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  min-width: 80px;
+  text-align: center;
+}
+
+.subMenuTextPoint {
+  text-transform: uppercase;
+}
+
+/* Стили для страницы С фото */
+.subMenuGalleryBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+}
+
+.subMenuGalleryWrapper {
+  width: 100%;
+  max-width: 800px;
+}
+
+.subMenuGalleryWrapper :global(div[class*="photoGallery"]) {
+  max-width: 800px;
+}
+
+.subMenuGalleryWrapper :global(div[class*="photoGalleryContainer"]) {
+  min-height: 400px;
+  max-height: 500px;
+}
+
+.subMenuGalleryControls{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+}
+
+.subMenuNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.fullscreenButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  background: none;
+  border: none;
+  color: #826748;
+  cursor: pointer;
+}
+
+.subMenuGalleryNavBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #826748;
+  border-radius: 50%;
+  border: 1px solid #826748;
+  background: none;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subMenuGalleryNavBtn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.subMenuGalleryNavBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.subMenuGalleryCounter {
+  font-size: 16px;
+  color: #826748;
+  font-weight: 500;
+  min-width: 80px;
+  text-align: center;
+  font-family: 'Raleway-v4020', serif;
+}
+
+.subMenuBtn {
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Anticva', serif;
+}
+
+.subMenuBtnBack {
+  background: none;
+  color: #826748;
+  border: 2px solid #826748;
+  border-radius: 2px;
+}
+
+.subMenuBtnBack:hover {
+  transform: translateY(-2px);
+}
+
+.subMenuBtnMainMenu {
+  background: none;
+  color: #826748;
+  border: 2px solid #826748;
+  border-radius: 2px;
+}
+
+.subMenuBtnMainMenu:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 968px) {
+  .subMenuMainContent {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .subMenuTextBlock {
+    flex: none;
+  }
+
+  .subMenuGalleryBlock {
+    flex: none;
+  }
+
+  .subMenuCenterText h1 {
+    font-size: 2rem;
+  }
+
+  .subMenuCenterText p {
+    font-size: 1rem;
+  }
+}

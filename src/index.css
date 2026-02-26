@@ -1,0 +1,48 @@
+/* Шрифты: положите файлы в public/fonts/ (Anticva-Regular.*, Raleway-v4020.*).
+   Raleway также подключается через Google Fonts в index.html. */
+@font-face {
+  font-family: 'Anticva';
+  src: url('/fonts/Anticva-Regular.woff2') format('woff2'),
+       url('/fonts/Anticva-Regular.woff') format('woff'),
+       url('/fonts/Anticva-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway-v4020';
+  src: url('/fonts/Raleway-v4020.woff2') format('woff2'),
+       url('/fonts/Raleway-v4020.woff') format('woff'),
+       url('/fonts/Raleway-v4020.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway-v4020';
+  src: local('Raleway-v4020'), local('Raleway'), local('Raleway-Regular');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway-v4020', sans-serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+#root {
+  min-height: 100vh;
+}
+

@@ -1,0 +1,258 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 0;
+  margin-left: 3%;
+  font-family: 'Anticva', serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  z-index: 1000;
+}
+
+/* Страница /archive/future/:id — увеличенный header для кастомизации */
+.headerFutureProject {
+  padding: 0;
+  min-height: 100px;
+}
+
+.headerTitleBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+/* Блок заголовка на /archive/future/:id — кастомизация title, subtitle и контейнера */
+.headerFutureProjectTitleBlock {
+  justify-content: space-around;
+  height: 180px;
+}
+
+.headerFutureProjectTitleBlock .headerTitle {
+  font-size: 28px;
+}
+
+.headerFutureProjectTitleBlock .headerSubtitle {
+  font-size: 28px;
+}
+
+.headerTitle {
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+  font-size: 24px;
+  font-weight: normal;
+  color: #291600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+  font-family: 'Anticva', serif;
+}
+
+.headerSubtitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+  color: #291600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Anticva', serif;
+  opacity: 0.9;
+}
+
+/* Общий блок кнопок: навигация по предмету + закрытие + поиск (каталог и catalog/id) */
+.headerActions {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: 35px;
+}
+
+.headerItemNavArrows {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 25px;
+}
+
+.headerItemNavBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  color: none;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.headerItemNavBtn:hover:not(:disabled) {
+  border-color: #CBB293;
+}
+
+.headerItemNavBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.headerItemNavClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 50px;
+  color: none;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+.headerBtnSearch {
+  font-family: 'Anticva', serif;
+  height: 50px;
+  width: 80px;
+  font-size: 16px;
+  color: #CBB293;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+
+.headerSearchWrap {
+  position: relative;
+  color: #344;
+}
+
+
+
+/* Панель поиска — одна линия: лупа | поле | кнопка закрытия */
+.headerSearchPanel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  min-width: 620px;
+  background: #fff;
+  border: 1px solid rgba(203, 178, 147, 0.4);
+  border-radius: 8px;
+  padding: 12px 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.headerSearchForm {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.headerSearchIconBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #CBB293;
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.headerSearchIconBtn:hover {
+  color: #e5d4b8;
+}
+
+.headerSearchInput {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+  font-size: 15px;
+  color: #161616;
+  background: #FFFDFC;
+  border: solid 2px #CBB293;
+  border-radius: 2px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.headerSearchClose {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: #BFA282;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.headerSearchInput::placeholder {
+  color: #B2B2B2;
+}
+
+/* Затемнение контента при открытых фильтрах/поиске */
+.headerOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .headerTitle {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .headerItemNav {
+    margin-right: 0;
+    gap: 8px;
+  }
+
+  .headerButtons {
+    margin-right: 0;
+  }
+
+  .headerDropdown {
+    min-width: 280px;
+    right: 0;
+  }
+
+  .headerSearchPanel {
+    min-width: 280px;
+    right: 0;
+  }
+}

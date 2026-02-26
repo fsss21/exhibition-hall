@@ -1,0 +1,102 @@
+.menuButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 380px;
+  gap: 2rem;
+  padding: 1rem 1rem;
+  flex-shrink: 0;
+  background: none;
+  overflow-y: auto;
+  height: 100vh;
+  font-family: 'Anticva', serif;
+}
+
+.menuBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+ 
+}
+
+.menuButton {
+  width: 100%;
+  padding: 1.25rem 2rem;
+  background: none;
+  color: #221102;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.05rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #221102;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Anticva', serif;
+}
+
+.menuButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.menuButton:hover::before {
+  left: 100%;
+}
+
+.menuButton:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.menuButton.active {
+  background: #CEAD75;
+  color: #221203;
+  box-shadow: 0 6px 16px rgba(173, 129, 92, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    #8C7B5F 20%,
+    #8C7B5F 50%,
+    #8C7B5F 80%,
+    transparent 100%
+  );
+  margin: 0.75rem 0;
+  border-radius: 1px;
+}
+
+@media (max-width: 968px) {
+  .menuButtons {
+    width: 100%;
+    min-width: auto;
+    height: auto;
+    max-height: 40vh;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .menuBlock {
+    padding: 0.75rem;
+  }
+
+  .menuButton {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}

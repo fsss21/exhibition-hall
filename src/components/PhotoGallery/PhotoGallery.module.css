@@ -1,0 +1,108 @@
+.gallery {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+.imageWrap {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #e8e0d5;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  display: block;
+}
+
+.placeholder {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8e0d5;
+  border-radius: 8px;
+  color: #8C5725;
+  font-size: 0.95rem;
+}
+
+.fullscreenOverlay {
+  position: fixed;
+  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fullscreenClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.fullscreenClose:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.fullscreenImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.fullscreenArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.fullscreenArrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.fullscreenArrowPrev {
+  left: 1rem;
+}
+
+.fullscreenArrowNext {
+  right: 1rem;
+}

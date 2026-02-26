@@ -1,0 +1,107 @@
+{
+  "past": [
+    {
+      "id": "exh-1",
+      "title": "НАЗВАНИЕ ВЫСТАВКИ 1",
+      "concept": {
+        "text": "Текст концепции прошедшей выставки 1. Описание экспозиции и замысла."
+      },
+      "catalog": [
+        {
+          "id": "past-1",
+          "name": "Экспонат прошедшей экспозиции 1",
+          "date": "2023",
+          "material": "Разные материалы",
+          "size": "—",
+          "description": "Описание экспоната из прошедшей выставки.",
+          "images": ["/data/images/placeholder.svg"]
+        },
+        {
+          "id": "past-2",
+          "name": "Экспонат прошедшей экспозиции 2",
+          "date": "2023",
+          "material": "—",
+          "size": "—",
+          "description": "Второй экспонат из архива.",
+          "images": ["/data/images/placeholder.svg"]
+        },
+        {
+          "id": "past-3",
+          "name": "Экспонат прошедшей экспозиции 3",
+          "date": "2023",
+          "material": "Разные материалы",
+          "size": "—",
+          "description": "Описание экспоната из прошедшей выставки.",
+          "images": ["/data/images/placeholder.svg"]
+        },
+        {
+          "id": "past-4",
+          "name": "Экспонат прошедшей экспозиции 4",
+          "date": "2023",
+          "material": "—",
+          "size": "—",
+          "description": "Второй экспонат из архива.",
+          "images": ["/data/images/placeholder.svg"]
+        }
+      ]
+    },
+    {
+      "id": "exh-2",
+      "title": "НАЗВАНИЕ ВЫСТАВКИ 2",
+      "concept": {
+        "text": "Текст концепции прошедшей выставки 2. Описание второй экспозиции."
+      },
+      "catalog": [
+        {
+          "id": "past-5",
+          "name": "Экспонат прошедшей экспозиции 1",
+          "date": "2023",
+          "material": "Разные материалы",
+          "size": "—",
+          "description": "Описание экспоната из прошедшей выставки.",
+          "images": ["/data/images/placeholder.svg"]
+        },
+        {
+          "id": "past-6",
+          "name": "Экспонат прошедшей экспозиции 2",
+          "date": "2023",
+          "material": "—",
+          "size": "—",
+          "description": "Второй экспонат из архива.",
+          "images": ["/data/images/placeholder.svg"]
+        },
+        {
+          "id": "past-7",
+          "name": "Экспонат прошедшей экспозиции 3",
+          "date": "2023",
+          "material": "Разные материалы",
+          "size": "—",
+          "description": "Описание экспоната из прошедшей выставки.",
+          "images": ["/data/images/placeholder.svg"]
+        },
+        {
+          "id": "past-8",
+          "name": "Экспонат прошедшей экспозиции 4",
+          "date": "2023",
+          "material": "—",
+          "size": "—",
+          "description": "Второй экспонат из архива.",
+          "images": ["/data/images/placeholder.svg"]
+        }
+      ]
+    }
+  ],
+  "future": [
+    {
+      "id": "fut-1",
+      "title": "Название будущего проекта 1",
+      "description": "Описание планируемой выставки или мероприятия. Текст загружается из /data/archive.json, раздел future.",
+      "images": ["/data/images/placeholder.svg"]
+    },
+    {
+      "id": "fut-2",
+      "title": "Название будущего проекта 2",
+      "description": "Второй будущий проект с кратким описанием."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "title": "Текущая выставка",
+  "exhibitions": [
+    { "title": "НАЗВАНИЕ ВРЕМЕННОЙ ВЫСТАВКИ", "text": "Текст концепции первой выставки. Описание темы, целей и содержания экспозиции." },
+    { "title": "ВТОРАЯ ВЫСТАВКА", "text": "Текст концепции второй выставки. Переключение между выставками — стрелками внизу." }
+  ],
+  "concept": {
+    "title": "НАЗВАНИЕ ВРЕМЕННОЙ ВЫСТАВКИ",
+    "text": "Текст концепции временной выставки. Описание темы, целей и содержания экспозиции. Данные подгружаются из файла /data/currentExhibition.json — можно изменить title, concept.title, concept.text и массив catalog с экспонатами."
+  },
+  "catalog": [
+    {
+      "id": "curr-1",
+      "name": "Экспонат текущей выставки 1",
+      "date": "XIX в.",
+      "material": "Керамика",
+      "size": "20 × 20 см",
+      "description": "Краткое описание экспоната.",
+      "images": ["/data/images/placeholder.svg"]
+    },
+    {
+      "id": "curr-2",
+      "name": "Экспонат текущей выставки 2",
+      "date": "XIX в.",
+      "material": "Металл",
+      "size": "15 см",
+      "description": "Краткое описание второго экспоната.",
+      "images": ["/data/images/placeholder.svg"]
+    },{
+      "id": "curr-3",
+      "name": "Экспонат текущей выставки 1",
+      "date": "XIX в.",
+      "material": "Керамика",
+      "size": "20 × 20 см",
+      "description": "Краткое описание экспоната.",
+      "images": ["/data/images/placeholder.svg"]
+    },
+    {
+      "id": "curr-4",
+      "name": "Экспонат текущей выставки 2",
+      "date": "XIX в.",
+      "material": "Металл",
+      "size": "15 см",
+      "description": "Краткое описание второго экспоната.",
+      "images": ["/data/images/placeholder.svg"]
+    },{
+      "id": "curr-5",
+      "name": "Экспонат текущей выставки 1",
+      "date": "XIX в.",
+      "material": "Керамика",
+      "size": "20 × 20 см",
+      "description": "Краткое описание экспоната.",
+      "images": ["/data/images/placeholder.svg"]
+    },
+    {
+      "id": "curr-6",
+      "name": "Экспонат текущей выставки 2",
+      "date": "XIX в.",
+      "material": "Металл",
+      "size": "15 см",
+      "description": "Краткое описание второго экспоната.",
+      "images": ["/data/images/placeholder.svg"]
+    },{
+      "id": "curr-7",
+      "name": "Экспонат текущей выставки 1",
+      "date": "XIX в.",
+      "material": "Керамика",
+      "size": "20 × 20 см",
+      "description": "Краткое описание экспоната.",
+      "images": ["/data/images/placeholder.svg"]
+    },
+    {
+      "id": "curr-8",
+      "name": "Экспонат текущей выставки 2",
+      "date": "XIX в.",
+      "material": "Металл",
+      "size": "15 см",
+      "description": "Краткое описание второго экспоната.",
+      "images": ["/data/images/placeholder.svg"]
+    }
+  ]
+}
