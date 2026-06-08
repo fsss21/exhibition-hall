@@ -20,6 +20,12 @@
   border-right: 2px solid #221102;
 }
 
+@media (max-width: 1200px) {
+  .content {
+    margin-right: 1rem;
+  }
+}
+
 @media (max-width: 968px) {
   .page {
     flex-direction: column;
@@ -27,5 +33,17 @@
 
   .content {
     margin: 0.5rem;
+    border-left: none;
+    border-right: none;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    margin: 0.25rem;
   }
 }

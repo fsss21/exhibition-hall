@@ -93,7 +93,7 @@ function ExhibitPage({ exhibit, category, subcategory, allExhibits, currentIndex
     <div className={styles.catalogItemPage}>
       <div
         className={styles.catalogItemBackground}
-        style={{ backgroundImage: `url(${imageSrc})` }}
+        style={{ '--background-image': `url(${imageSrc})` }}
       />
       <div className={styles.catalogItemContent}>
         {showBackInPage && onClose && (

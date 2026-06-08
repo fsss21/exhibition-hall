@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import MenuButtons from '../../components/MenuButtons/MenuButtons'
 import Gallery from '../../components/Gallery/Gallery'
+import ArchiveFutureProjects from './ArchiveFutureProjects'
 import styles from '../ConceptPage/ConceptPage.module.css'
 import archiveImg from '../../assets/archive_img.png'
 import archiveImg4k from '../../assets/archive_img-4k.png'
@@ -17,13 +18,6 @@ const ARCHIVE_CATEGORIES = {
   past: {
     name: 'Прошедшие экспозиции',
     subcategories: [{ id: 'all', name: 'Выставки' }]
-  }
-}
-
-const FUTURE_CATEGORIES = {
-  future: {
-    name: 'Будущие проекты',
-    subcategories: [{ id: 'all', name: 'Проекты' }]
   }
 }
 
@@ -71,16 +65,6 @@ function ArchivePage() {
     return { past: { all: items } }
   }, [pastExhibitions])
 
-  const futureExhibitsForGallery = useMemo(() => {
-    const items = futureItems.map((item) => ({
-      id: item.id,
-      name: item.title ?? item.name ?? 'Проект',
-      description: item.description ?? '',
-      images: Array.isArray(item.images) && item.images.length > 0 ? item.images : [PLACEHOLDER_IMAGE]
-    }))
-    return { future: { all: items } }
-  }, [futureItems])
-
   const backgroundSrc = selectedTab === 'past'
     ? (is4K ? archiveCatalogImg4k : archiveCatalogImg)
     : (is4K ? archiveImg4k : archiveImg)
@@ -97,7 +81,7 @@ function ArchivePage() {
     <div className={styles.page}>
       <div
         className={styles.conceptBackground}
-        style={{ backgroundImage: `url(${backgroundSrc})` }}
+        style={{ '--background-image': `url(${backgroundSrc})` }}
       />
       <div className={styles.sidebar}>
         <MenuButtons
@@ -118,14 +102,11 @@ function ArchivePage() {
             title="ПРОШЕДШИЕ ЭКСПОЗИЦИИ"
           />
         ) : (
-          <Gallery
-            categories={FUTURE_CATEGORIES}
-            exhibits={futureExhibitsForGallery}
-            category="future"
-            onExhibitSelect={handleFutureProjectSelect}
+          <ArchiveFutureProjects
+            items={futureItems}
+            loading={!data}
+            onItemSelect={handleFutureProjectSelect}
             onBack={() => navigate('/')}
-            conceptMode
-            title="БУДУЩИЕ ПРОЕКТЫ"
           />
         )}
       </div>

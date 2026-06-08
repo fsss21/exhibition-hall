@@ -106,3 +106,64 @@
 .fullscreenArrowNext {
   right: 1rem;
 }
+
+@media (max-width: 968px) {
+  .gallery {
+    min-height: 320px;
+  }
+
+  .image {
+    max-height: 380px;
+  }
+
+  .placeholder {
+    min-height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    min-height: 260px;
+  }
+
+  .image {
+    max-height: 300px;
+  }
+
+  .fullscreenClose,
+  .fullscreenArrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .fullscreenArrowPrev {
+    left: 0.5rem;
+  }
+
+  .fullscreenArrowNext {
+    right: 0.5rem;
+  }
+
+  .fullscreenImage {
+    max-width: 95vw;
+    max-height: 85vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    min-height: 200px;
+  }
+
+  .image {
+    max-height: 240px;
+  }
+
+  .fullscreenClose {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
+  }
+}

@@ -14,3 +14,17 @@
   flex-direction: column;
 }
 
+@media (max-width: 968px) {
+  .app {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .mainContent {
+    overflow: visible;
+    min-height: 0;
+  }
+}
+

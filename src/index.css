@@ -34,12 +34,17 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Raleway-v4020', sans-serif;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f5f5f5;
+  overflow-x: hidden;
 }
 
 #root {

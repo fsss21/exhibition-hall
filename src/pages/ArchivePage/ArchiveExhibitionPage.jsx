@@ -95,7 +95,7 @@ function ArchiveExhibitionPage() {
     <div className={styles.page}>
       <div
         className={styles.conceptBackground}
-        style={{ backgroundImage: `url(${backgroundSrc})` }}
+        style={{ '--background-image': `url(${backgroundSrc})` }}
       />
       <div className={styles.sidebar}>
         <MenuButtons

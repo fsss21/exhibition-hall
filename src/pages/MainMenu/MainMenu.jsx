@@ -56,7 +56,7 @@ function MainMenu() {
     <div className={styles.mainMenu}>
       <div
         className={styles.mainMenuBackground}
-        style={{ backgroundImage: `url(${backgroundSrc})` }}
+        style={{ '--background-image': `url(${backgroundSrc})` }}
       />
       <h1 className={styles.title}>ЗАЛ ВРЕМЕННЫХ ВЫСТАВОК</h1>
       <div className={styles.buttons}>

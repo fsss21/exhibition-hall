@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 30px 0;
+  padding: 35px 0;
   margin-left: 3%;
   font-family: 'Anticva', serif;
   display: flex;
@@ -231,28 +231,145 @@
   cursor: default;
 }
 
-@media (max-width: 768px) {
-  .headerTitle {
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+@media (max-width: 1200px) {
+  .header {
+    margin-left: 1.5%;
+    padding: 24px 0;
   }
 
-  .headerItemNav {
-    margin-right: 0;
-    gap: 8px;
-  }
-
-  .headerButtons {
-    margin-right: 0;
-  }
-
-  .headerDropdown {
-    min-width: 280px;
-    right: 0;
+  .headerActions {
+    margin-right: 20px;
+    gap: 12px;
   }
 
   .headerSearchPanel {
-    min-width: 280px;
-    right: 0;
+    min-width: 480px;
+  }
+}
+
+@media (max-width: 968px) {
+  .header {
+    padding: 16px 12px;
+    margin-left: 0;
+    gap: 12px;
+  }
+
+  .headerTitle {
+    font-size: clamp(1rem, 3.5vw, 1.4rem);
+    letter-spacing: 1px;
+  }
+
+  .headerSubtitle {
+    font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+  }
+
+  .headerFutureProjectTitleBlock {
+    height: auto;
+    min-height: 80px;
+    padding: 0.5rem 0;
+  }
+
+  .headerFutureProjectTitleBlock .headerTitle,
+  .headerFutureProjectTitleBlock .headerSubtitle {
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
+  }
+
+  .headerActions {
+    position: relative;
+    margin-right: 0;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .headerItemNavArrows {
+    margin-right: 8px;
+    gap: 4px;
+  }
+
+  .headerItemNavBtn,
+  .headerItemNavClose {
+    width: 42px;
+    height: 42px;
+  }
+
+  .headerItemNavClose {
+    width: auto;
+    min-width: 80px;
+    font-size: 0.85rem;
+  }
+
+  .headerBtnSearch {
+    width: 60px;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .headerSearchPanel {
+    min-width: min(100vw - 24px, 400px);
+    right: -12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .headerTitleBlock {
+    flex: 1;
+    min-width: 0;
+    max-width: calc(100% - 160px);
+  }
+
+  .headerTitle {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .headerSubtitle {
+    font-size: 0.8rem;
+    word-break: break-word;
+  }
+
+  .headerSearchPanel {
+    min-width: min(100vw - 24px, 320px);
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 12px 8px;
+  }
+
+  .headerTitleBlock {
+    max-width: 100%;
+  }
+
+  .headerActions {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 4px;
+  }
+
+  .headerItemNavBtn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .headerBtnSearch {
+    width: 50px;
+    height: 36px;
+  }
+
+  .headerSearchPanel {
+    min-width: calc(100vw - 16px);
+    right: -8px;
+    padding: 10px;
+  }
+
+  .headerSearchInput {
+    font-size: 14px;
+    padding: 8px 10px;
   }
 }

@@ -17,6 +17,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background-image: var(--background-image);
   background-size: cover;
   background-position: center 20%;
   background-repeat: no-repeat;
@@ -95,4 +96,64 @@
 
 .menuButton:active {
   transform: translateY(0);
+}
+
+@media (max-width: 1200px) {
+  .buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .menuItem {
+    width: 260px;
+    height: auto;
+    min-height: 180px;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .mainMenu {
+    padding: 1.5rem 1rem;
+    padding-top: 2rem;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    margin-bottom: 2rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 10px;
+    max-width: 400px;
+  }
+
+  .menuItem {
+    width: 100%;
+    max-width: 340px;
+    min-height: auto;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainMenu {
+    padding: 1rem 0.75rem;
+    padding-top: 1.5rem;
+  }
+
+  .title {
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.03em;
+  }
+
+  .menuButton {
+    width: 100%;
+    padding: 0.65rem 1rem;
+  }
 }

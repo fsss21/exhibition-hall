@@ -5,6 +5,8 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding-top: 100px;
+  box-sizing: border-box;
 }
 
 .conceptBackground {
@@ -13,6 +15,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background-image: var(--background-image);
   background-size: cover;
   background-position: center 20%;
   background-repeat: no-repeat;
@@ -42,6 +45,15 @@
   height: 800px;
 }
 
+.contentContainer{
+  display: flex;
+  width: 100%;
+  max-width: 1150px;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 14%;
+}
+
 .contentCatalog {
   justify-content: flex-start;
   align-items: stretch;
@@ -61,25 +73,24 @@
 }
 
 .textBlock {
-  
   overflow: auto;
   font-size: 1rem;
   line-height: 1.7;
   color: #221102;
   font-family: 'Raleway-v4020', sans-serif;
   padding: 0 0.5rem;
-  max-width: 1200px;
+  max-width: 1000px;
   height: 400px;
 }
 
 .bottomBar {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
   padding: 1rem 0;
   min-height: 60px;
-  width: 800px;
+  width: 1000px;
 }
 
 .backButton {
@@ -160,17 +171,128 @@
   color: #826748;
 }
 
+@media (max-width: 1200px) {
+  .content {
+    height: auto;
+    max-width: 100%;
+    margin-right: 1rem;
+    padding: 1rem;
+  }
+
+  .contentContainer {
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .bottomBar {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .textBlock {
+    height: auto;
+    max-height: 50vh;
+    max-width: 100%;
+  }
+
+  .conceptTitle {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+  }
+}
+
 @media (max-width: 968px) {
   .page {
     flex-direction: column;
+    align-items: stretch;
+    padding-top: 90px;
+  }
+
+  .sidebar {
+    padding: 0.75rem 1rem;
+    width: 100%;
   }
 
   .content {
     margin: 0.5rem;
+    margin-right: 0.5rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .contentCatalog {
     min-height: 60vh;
     padding: 0.75rem 1rem;
+  }
+
+  .bottomBar {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    padding: 0.75rem 0;
+  }
+
+  .textNav {
+    gap: 0.5rem;
+  }
+
+  .textNavArrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 0.75rem;
+  }
+
+  .textBlock {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-height: 45vh;
+    padding: 0 0.25rem;
+  }
+
+  .backButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .archiveExhibitionList {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding-top: 80px;
+  }
+
+  .contentCatalog {
+    min-height: auto;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .conceptTitle {
+    margin-bottom: 1rem;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .backButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .textNav {
+    justify-content: center;
+  }
+
+  .navPlaceholder {
+    display: none;
   }
 }

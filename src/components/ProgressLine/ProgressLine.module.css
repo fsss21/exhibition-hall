@@ -100,3 +100,70 @@
   transform: translate(-50%, -50%);
 }
 
+@media (max-width: 1200px) {
+  .progressLineLabel {
+    max-width: 200px;
+    font-size: 16px;
+    padding: 12px;
+    top: -50px;
+  }
+}
+
+@media (max-width: 968px) {
+  .progressLine {
+    min-height: 80px;
+    height: 80px;
+    padding: 12px 0;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .progressLineLine {
+    min-width: max(100%, 600px);
+  }
+
+  .progressLineLine::before {
+    top: 40px;
+  }
+
+  .progressLinePoint {
+    min-height: 80px;
+    height: 80px;
+  }
+
+  .progressLineLabel {
+    max-width: 140px;
+    font-size: 13px;
+    padding: 8px 10px;
+    top: -42px;
+  }
+
+  .progressLineDot {
+    top: 40px;
+  }
+
+  .progressLinePointActive .progressLineDot {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .progressLineLabel {
+    max-width: 100px;
+    font-size: 11px;
+    padding: 6px 8px;
+    top: -36px;
+  }
+
+  .progressLineDot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .progressLinePointActive .progressLineDot {
+    width: 16px;
+    height: 16px;
+  }
+}

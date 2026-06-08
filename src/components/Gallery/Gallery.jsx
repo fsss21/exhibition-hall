@@ -111,7 +111,7 @@ const Gallery = ({ categories = {}, exhibits = {}, category, onExhibitSelect, on
         <button type="button" className={styles.backButton} onClick={() => { onBack?.(); onCategoryChange?.() }}>
           Назад
         </button>
-        <div style={{ display: 'flex', gap: '14px' }}>
+        <div className={styles.navArrows}>
           <button
             type="button"
             className={`${styles.navArrow} ${totalPages <= 1 ? styles.navArrowDisabled : ''}`}

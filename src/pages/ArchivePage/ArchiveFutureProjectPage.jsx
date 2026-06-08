@@ -98,7 +98,7 @@ function ArchiveFutureProjectPage() {
     <div className={styles.subMenu}>
       <div
         className={styles.subMenuBackground}
-        style={{ backgroundImage: `url(${backgroundImageSrc})` }}
+        style={{ '--background-image': `url(${backgroundImageSrc})` }}
       />
       <div className={styles.subMenuContent}>
         <div className={`${styles.futureProjectMainContent} ${!hasPhotos ? styles.futureProjectMainContentCentered : ''}`}>

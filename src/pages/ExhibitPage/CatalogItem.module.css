@@ -29,6 +29,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background-image: var(--background-image);
   background-size: cover;
   background-position: center 20%;
   background-repeat: no-repeat;
@@ -313,21 +314,125 @@
   transform: scale(1.1);
 }
 
+@media (max-width: 1200px) {
+  .catalogItemPhotoBlock {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .catalogItemGallery > div > div {
+    min-height: 360px !important;
+    max-height: 450px !important;
+  }
+}
+
 @media (max-width: 968px) {
+  .catalogItemPage {
+    padding: 30px 16px;
+    padding-top: 90px;
+  }
+
+  .catalogItemContent {
+    padding-top: 40px;
+  }
+
   .catalogItemMain {
     flex-direction: column;
     gap: 20px;
+    min-height: auto;
   }
 
   .catalogItemTextBlock {
     flex: none;
+    max-width: 100%;
+    min-height: auto;
+    padding: 20px;
   }
 
   .catalogItemPhotoBlock {
     flex: none;
+    max-width: 100%;
+    margin-right: 0;
   }
 
   .catalogItemName {
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+  }
+
+  .catalogItemGallery {
+    min-height: 320px;
+    padding: 16px;
+  }
+
+  .catalogItemGallery > div > div {
+    min-height: 280px !important;
+    max-height: 380px !important;
+  }
+
+  .catalogItemTopBar {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .catalogItemTextNavigation {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalogItemInfoRow {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .catalogItemInfoLabel {
+    min-width: auto;
+  }
+
+  .catalogItemPhotoNavigation {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .catalogItemExhibitNavBtn,
+  .catalogItemTextNavBtn,
+  .catalogItemPhotoNavBtn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalogItemPage {
+    padding: 20px 12px;
+    padding-top: 80px;
+  }
+
+  .catalogItemTextBlock {
+    padding: 16px;
+  }
+
+  .catalogItemGallery {
+    min-height: 240px;
+    padding: 12px;
+  }
+
+  .catalogItemGallery > div > div {
+    min-height: 200px !important;
+    max-height: 280px !important;
+  }
+
+  .catalogItemBackLink {
+    width: 100%;
+    text-align: center;
+  }
+
+  .catalogItemPhotoCounter,
+  .catalogItemTextCounter {
+    font-size: 16px;
+    min-width: 60px;
   }
 }

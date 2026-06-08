@@ -84,7 +84,7 @@ function ConceptPage({ title: titleProp, text: textProp, selectedTab: selectedTa
     <div className={styles.page}>
       <div
         className={styles.conceptBackground}
-        style={{ backgroundImage: `url(${backgroundSrc})` }}
+        style={{ '--background-image': `url(${backgroundSrc})` }}
       />
       <div className={styles.sidebar}>
         <MenuButtons
@@ -94,54 +94,56 @@ function ConceptPage({ title: titleProp, text: textProp, selectedTab: selectedTa
         />
       </div>
       <div className={`${styles.content} ${selectedTab === 'catalog' ? styles.contentCatalog : ''}`}>
-        {selectedTab === 'concept' ? (
-          <>
-            <h1 className={styles.conceptTitle}>{currentExhibition?.title ?? ''}</h1>
-            <div className={styles.textBlock}>{currentExhibition?.text ?? ''}</div>
-            <div className={styles.bottomBar}>
-              <button type="button" className={styles.backButton} onClick={handleBack}>
-                Назад
-              </button>
-              {totalExhibitions > 1 ? (
-                <div className={styles.textNav}>
-                  <button
-                    type="button"
-                    className={styles.textNavArrow}
-                    onClick={handlePrevExhibition}
-                    title="Предыдущая выставка"
-                    aria-label="Предыдущая выставка"
-                  >
-                    <WestIcon />
-                  </button>
-                  <span className={styles.textPageIndicator}>
-                    {currentExhibitionIndex + 1} / {totalExhibitions}
-                  </span>
-                  <button
-                    type="button"
-                    className={styles.textNavArrow}
-                    onClick={handleNextExhibition}
-                    title="Следующая выставка"
-                    aria-label="Следующая выставка"
-                  >
-                    <EastIcon />
-                  </button>
-                </div>
-              ) : (
-                <div className={styles.navPlaceholder} />
-              )}
-            </div>
-          </>
-        ) : (
-          <Gallery
-            categories={CATALOG_CATEGORIES}
-            exhibits={catalogExhibits}
-            category="catalog"
-            onExhibitSelect={handleExhibitSelect}
-            onBack={handleCatalogBack}
-            conceptMode
-            title={data?.title ?? 'НАЗВАНИЕ ВРЕМЕННОЙ ВЫСТАВКИ'}
-          />
-        )}
+        <div className={styles.contentContainer}>
+          {selectedTab === 'concept' ? (
+            <>
+              <h1 className={styles.conceptTitle}>{currentExhibition?.title ?? ''}</h1>
+              <div className={styles.textBlock}>{currentExhibition?.text ?? ''}</div>
+              <div className={styles.bottomBar}>
+                <button type="button" className={styles.backButton} onClick={handleBack}>
+                  Назад
+                </button>
+                {totalExhibitions > 1 ? (
+                  <div className={styles.textNav}>
+                    <button
+                      type="button"
+                      className={styles.textNavArrow}
+                      onClick={handlePrevExhibition}
+                      title="Предыдущая выставка"
+                      aria-label="Предыдущая выставка"
+                    >
+                      <WestIcon />
+                    </button>
+                    <span className={styles.textPageIndicator}>
+                      {currentExhibitionIndex + 1} / {totalExhibitions}
+                    </span>
+                    <button
+                      type="button"
+                      className={styles.textNavArrow}
+                      onClick={handleNextExhibition}
+                      title="Следующая выставка"
+                      aria-label="Следующая выставка"
+                    >
+                      <EastIcon />
+                    </button>
+                  </div>
+                ) : (
+                  <div className={styles.navPlaceholder} />
+                )}
+              </div>
+            </>
+          ) : (
+            <Gallery
+              categories={CATALOG_CATEGORIES}
+              exhibits={catalogExhibits}
+              category="catalog"
+              onExhibitSelect={handleExhibitSelect}
+              onBack={handleCatalogBack}
+              conceptMode
+              title={data?.title ?? 'НАЗВАНИЕ ВРЕМЕННОЙ ВЫСТАВКИ'}
+            />
+          )}
+        </div>
       </div>
     </div>
   )
