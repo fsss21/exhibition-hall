@@ -169,7 +169,7 @@ function Header() {
   const headerSubtitle = isFutureProjectPage && archiveFutureProjectName
     ? `БУДУЩИЕ ПРОЕКТЫ -> ${archiveFutureProjectName}`
     : null
-  const showOverlay = searchOpen
+  const showOverlay = searchOpen && isArchiveCatalog
   const showHeaderActions = onCatalogItemPage
 
   return (
@@ -186,47 +186,8 @@ function Header() {
 
         {showHeaderActions && (
           <div className={styles.headerActions}>
-            {onCatalogItemPage && (
+            {isConceptCatalog && (
               <>
-                <div className={styles.headerSearchWrap}>
-                  <button
-                    type="button"
-                    className={styles.headerBtnSearch}
-                    onClick={handleSearchToggle}
-                    aria-expanded={searchOpen}
-                    aria-label="Открыть поиск"
-                  />
-                  {searchOpen && (
-                    <div className={styles.headerSearchPanel} onClick={(e) => e.stopPropagation()}>
-                      <form className={styles.headerSearchForm} onSubmit={handleSearchSubmit}>
-                        <button
-                          type="submit"
-                          className={styles.headerSearchIconBtn}
-                          aria-label="Выполнить поиск"
-                        >
-                          <SearchIcon fontSize="large" />
-                        </button>
-                        <input
-                          type="text"
-                          className={styles.headerSearchInput}
-                          placeholder="Найти произведение или автора"
-                          value={searchQuery}
-                          onChange={(e) => setSearchQuery(e.target.value)}
-                          autoFocus
-                          aria-label="Поиск"
-                        />
-                      </form>
-                      <button
-                        type="button"
-                        className={styles.headerSearchClose}
-                        onClick={() => setSearchOpen(false)}
-                        aria-label="Закрыть поиск"
-                      >
-                        <CloseIcon fontSize="large" />
-                      </button>
-                    </div>
-                  )}
-                </div>
                 <div className={styles.headerItemNavArrows}>
                   <button
                     type="button"
@@ -235,7 +196,7 @@ function Header() {
                     disabled={!prevItem}
                     aria-label="Предыдущий предмет"
                   >
-
+                    <ArrowBackIosNewIcon />
                   </button>
                   <button
                     type="button"
@@ -244,7 +205,7 @@ function Header() {
                     disabled={!nextItem}
                     aria-label="Следующий предмет"
                   >
-
+                    <ArrowForwardIosIcon />
                   </button>
                 </div>
                 <button
@@ -253,11 +214,45 @@ function Header() {
                   onClick={handleCloseItem}
                   aria-label="Закрыть, вернуться в каталог"
                 >
-
+                  <CloseIcon fontSize="large" />
                 </button>
+
               </>
             )}
 
+            {isArchiveCatalog && (
+              <>
+
+                <div className={styles.headerItemNavArrows}>
+                  <button
+                    type="button"
+                    className={styles.headerItemNavBtn}
+                    onClick={handlePrevItem}
+                    disabled={!prevItem}
+                    aria-label="Предыдущий предмет"
+                  >
+                    <ArrowBackIosNewIcon />
+                  </button>
+                  <button
+                    type="button"
+                    className={styles.headerItemNavBtn}
+                    onClick={handleNextItem}
+                    disabled={!nextItem}
+                    aria-label="Следующий предмет"
+                  >
+                    <ArrowForwardIosIcon />
+                  </button>
+                </div>
+                <button
+                  type="button"
+                  className={styles.headerItemNavClose}
+                  onClick={handleCloseItem}
+                  aria-label="Закрыть, вернуться в каталог"
+                >
+                  <CloseIcon fontSize="large" />
+                </button>
+              </>
+            )}
           </div>
         )}
       </header>
